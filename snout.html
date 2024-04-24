@@ -301,14 +301,55 @@
 					
 						
 
-		<div><div style="height:20px;overflow:hidden"></div>
+		<!-- <div><div style="height:20px;overflow:hidden"></div>
 		<div id='623007605450178642-slideshow'></div>
 		<script type='text/javascript'>
 		(function(jQuery) {
-		function init() { window.wSlideshow && window.wSlideshow.render({elementID:"623007605450178642",nav:"none",navLocation:"bottom",captionLocation:"bottom",transition:"fade",autoplay:"1",speed:"5",aspectRatio:"auto",showControls:"true",randomStart:"false",images:[{"url":"https://karlinamaya.com/images/madison-2.png","width":800,"height":450,"fullHeight":619,"fullWidth":1100},{"url":"https://karlinamaya.com/images/april-1.png","width":800,"height":450,"fullHeight":619,"fullWidth":1100},{"url":"https://karlinamaya.com/images/theo-1.png","width":800,"height":450,"fullHeight":619,"fullWidth":1100}]}) }
+		function init() { window.wSlideshow && window.wSlideshow.render({elementID:"623007605450178642",nav:"none",navLocation:"bottom",captionLocation:"bottom",transition:"fade",autoplay:"1",speed:"5",aspectRatio:"auto",showControls:"true",randomStart:"false",images:[{"url":"/images/madison-2.png","width":800,"height":450,"fullHeight":619,"fullWidth":1100},{"url":"/images/april-1_orig.png","width":800,"height":450,"fullHeight":619,"fullWidth":1100},{"url":"https://karlinamaya.com/images/theo-1.png","width":800,"height":450,"fullHeight":619,"fullWidth":1100}]}) }
 		jQuery(document).ready(init);
 		})(window.jQuery)
-		</script>
+		</script> -->
+
+		<style>
+			#slideshow {
+				position: relative;
+			}
+			#slideshow img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%; 
+				height: auto;
+				opacity: 0;
+				transition: opacity 1s ease-in-out;
+			}
+			#slideshow img.show {
+				opacity: 1;
+			}
+		</style>
+
+<div id="slideshow">
+    <img class="show" src="https://karlinamaya.com/images/madison-2_orig.png" alt="Madison">
+    <img src="https://karlinamaya.com/images/april-1_orig.png" alt="April">
+    <img src="https://karlinamaya.com/images/theo-1_orig.png" alt="Theo">
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementById("slideshow").getElementsByTagName("img");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("show");
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    slides[slideIndex-1].classList.add("show");
+    setTimeout(showSlides, 4000);
+}
+</script>
 
 <div style="height:20px;overflow:hidden"></div></div>
 
@@ -405,7 +446,7 @@
 				</td>				<td class="wsite-multicol-col" style="width:48.767967145791%; padding:0 15px;">
 					
 						
-
+<!-- 
 <div><div style="height:20px;overflow:hidden"></div>
 <div id='798080563752811200-slideshow'></div>
 <script type='text/javascript'>
@@ -413,6 +454,47 @@
 function init() { window.wSlideshow && window.wSlideshow.render({elementID:"798080563752811200",nav:"none",navLocation:"bottom",captionLocation:"bottom",transition:"fade",autoplay:"1",speed:"5",aspectRatio:"auto",showControls:"true",randomStart:"false",images:[{"url":"1/4/6/6/146646089/landing-frame-1920.webp","width":"800","height":"450","caption":"Desktop"},{"url":"1/4/6/6/146646089/landing-frame-900.webp","width":"738","height":"1180","caption":"Tablet"},{"url":"1/4/6/6/146646089/landing-frame-480-1.jpg","width":"480","height":"960","caption":"Smartphone\n"}]}) }
 jQuery(document).ready(init);
 })(window.jQuery)
+</script> -->
+
+<style>
+	#slideshow {
+		position: relative;
+	}
+	#slideshow img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%; 
+		height: auto;
+		opacity: 0;
+		transition: opacity 1s ease-in-out;
+	}
+	#slideshow img.show {
+		opacity: 1;
+	}
+</style>
+
+<div id="slideshow">
+<img class="show" src="https://karlinamaya.com/images/landing-frame-1920" alt="Desktop">
+<img src="https://karlinamaya.com/images/landing-frame-900.png" alt="Mobile">
+<img src="https://karlinamaya.com/images/landing-frame-480-1.png" alt="Tablet">
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+var i;
+var slides = document.getElementById("slideshow").getElementsByTagName("img");
+for (i = 0; i < slides.length; i++) {
+slides[i].classList.remove("show");
+}
+slideIndex++;
+if (slideIndex > slides.length) {slideIndex = 1}    
+slides[slideIndex-1].classList.add("show");
+setTimeout(showSlides, 4000);
+}
 </script>
 
 <div style="height:20px;overflow:hidden"></div></div>
